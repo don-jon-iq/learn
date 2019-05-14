@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="stage.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//www.fontstatic.com/f=cocon-next-arabic"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//www.fontstatic.com/f=cocon-next-arabic,kawkab-bold"
+    />
+
+    <title>Learn</title>
+  </head>
+
+  <body>
+    <header>
+      <div id="logo" class="menuUp">
+        <img src="logo.png" />
+        <div id="navToggle"><a href="index.html">Menu</a></div>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <script>
+        $(document).ready(function() {
+          $("#navToggle a").click(function(e) {
+            e.preventDefault();
+
+            $("header > nav").slideToggle("medium");
+            $("#logo").toggleClass("menuUp menuDown");
+          });
+
+          $(window).resize(function() {
+            if ($(window).width() >= "600") {
+              $("header > nav").css("display", "block");
+
+              if ($("#logo").attr("class") == "menuDown") {
+                $("#logo").toggleClass("menuUp menuDown");
+              }
+            } else {
+              $("header > nav").css("display", "none");
+            }
+          });
+
+          $("header > nav > ul > li > a").click(function(e) {
+            if ($(window).width() <= "600") {
+              if (
+                $(this)
+                  .siblings()
+                  .size() > 0
+              ) {
+                $(this)
+                  .siblings()
+                  .slideToggle("fast");
+                $(this)
+                  .children(".toggle")
+                  .html(
+                    $(this)
+                      .children(".toggle")
+                      .html() == "close"
+                      ? "expand"
+                      : "close"
+                  );
+              }
+            }
+          });
+        });
+      </script>
+      <nav>
+        <ul>
+          <li><a href="index.html">الرئيسية</a></li>
+          <li>
+            <a href="##"
+              >المراحل <span class="toggle">Expand</span
+              ><span class="caret"></span
+            ></a>
+            <nav>
+              <ul>
+                <li><a href="stage1.html">المرحلة الاولى</a></li>
+                <li><a href="stage2.html">المرحلة الثانية</a></li>
+                <li><a href="stage3.html">المرحلة الثالثة</a></li>
+                <li><a href="stage4.html">المرحلة الرابعة</a></li>
+              </ul>
+            </nav>
+          </li>
+          <li>
+            <a href="#"
+              >فيديوات <span class="toggle">Expand</span
+              ><span class="caret"></span
+            ></a>
+            <nav>
+              <ul>
+                <li><a href="videos1.html">المرحلة الاولى</a></li>
+                <li><a href="videos2.html">المرحلة الثانية</a></li>
+                <li><a href="videos3.html">المرحلة الثالثة</a></li>
+                <li><a href="videos4.html">المرحلة الرابعة</a></li>
+              </ul>
+            </nav>
+          </li>
+          <li><a href="ref.html">مصادر مفيدة</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div id="site-content">
+      <nav id="section-menu">
+        <ul></ul>
+      </nav>
+      <section id="section-one" class="section scroll-item" title="كيانية">
+        <div class="inner">
+          <h2 id="section-title">كيانية</h2>
+          <div class="flex-container">
+            <div class="container-1" id="container">
+              <a id="container-title">ملازم</a>
+              <ul id="container-list">
+                <li>
+                  <a href="https://drive.google.com/open?id=1IToCcorLkLvVVUQwAvJq6_AW2xc7wpDq"> كاملة</a></li> 
+                 <li> <a href="https://drive.google.com/open?id=1R76xzmtM7KTNvcTEVT0cQ8B0YT4OQj2w"> الوراثة c++</a></li> 
+                             
+          </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="section-two" class="section scroll-item" title="احتسابيه">
+        <div class="inner">
+          <h2 id="section-title">احتسابيه</h2>
+          <div class="flex-container">
+            <div class="container-1" id="container">
+              <a id="container-title">ملازم</a>
+              <ul id="container-list">
+                <li><a href="https://drive.google.com/open?id=1QYgc1dPN35wKMl-Ju_v8artLZCxMMTsc">كاملة </a></li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="section-three" class="section scroll-item" title="هياكل">
+        <div class="inner">
+          <h2 id="section-title">هياكل</h2>
+          <div class="flex-container">
+            <div class="container-1" id="container">
+              <a id="container-title">ملازم</a>
+              <ul id="container-list">
+                <li><a href="https://drive.google.com/open?id=1pQZ1tv3SB70z5531_Ck9Z5uhqqP7aCSW">دفتر </a></li>
+                <li><a href="https://drive.google.com/open?id=1UJAijmwjA27U8-THY3XUw8ev1vvXNRwc">اسئلة طابور</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="section-four" class="section scroll-item" title="تحليل">
+        <div class="inner">
+          <h2 id="section-title">تحليل</h2>
+          <div class="flex-container">
+            <div class="container-1" id="container">
+              <a id="container-title">ملازم</a>
+              <ul id="container-list">
+                <li><a href="https://drive.google.com/open?id=1bCOqnI8V_k2WM7blKQz-CmDmn6q8tI3v">اسئلة</a></li>
+                <li><a href="https://drive.google.com/open?id=1imAFP2CsD6uDQ2pAJW8NOH2O4DgjYbFh">كورس اول</a></li>
+                <li><a href="https://drive.google.com/open?id=1l5aZerUozs-4rq56OPLy1iu5RffEWOD6">مختبر كامل</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="section-five" class="section scroll-item" title="معمارية">
+        <div class="inner">
+          <h2 id="section-title">معمارية</h2>
+          <div class="flex-container">
+            <div class="container-1" id="container">
+              <a id="container-title">ملازم</a>
+              <ul id="container-list">
+                <li>
+                  <a href="https://drive.google.com/open?id=19Hd5SQ-dpdER5pmpDE-w_r3YCieDFcr0">كاملة</a>
+              </ul>
+            </div>
+            <div class="container-2" id="container">
+              <a id="container-title">مختبر</a>
+              <ul id="container-list">
+                <li>
+                  <a href="https://drive.google.com/open?id=17Z3PwqLkNKznxubiAIkOKLA1-2Oy6YUq">كامل</a>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="section-six" class="section scroll-item" title="رياضيات">
+        <div class="inner">
+          <h2 id="section-title">رياضيات</h2>
+          <div class="flex-container">
+            <div class="container-1" id="container">
+              <a id="container-title">ملازم</a>
+              <ul id="container-list">
+                <li><a href="https://drive.google.com/open?id=1BZut4Vf57gCQKZoE400HduN7T_cQ5COD">كاملة</a></li>
+               
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="section-seven" class="section scroll-item" title="حرية">
+        <div class="inner">
+          <h2 id="section-title">حرية</h2>
+          <div class="flex-container">
+            <div class="container-1" id="container">
+              <a id="container-title">ملازم</a>
+              <ul id="container-list">
+                <li><a href="https://drive.google.com/open?id=1liXotGNCU3Zdcc162KOkqIiLtpeEvy6S">كاملة </a></li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <script>
+        jQuery(function($) {
+          var html = $("html");
+          var viewport = $(window);
+          var viewportHeight = viewport.height();
+
+          var scrollMenu = $("#section-menu");
+          var timeout = null;
+
+          function menuFreeze() {
+            if (timeout !== null) {
+              scrollMenu.removeClass("freeze");
+              clearTimeout(timeout);
+            }
+
+            timeout = setTimeout(function() {
+              scrollMenu.addClass("freeze");
+            }, 2000);
+          }
+          scrollMenu.mouseover(menuFreeze);
+
+          /* ==========================================================================
+	   Build the Scroll Menu based on Sections .scroll-item
+	   ========================================================================== */
+
+          var sectionsHeight = {},
+            viewportheight,
+            i = 0;
+          var scrollItem = $(".scroll-item");
+          var bannerHeight;
+
+          function sectionListen() {
+            viewportHeight = viewport.height();
+            bannerHeight = viewportHeight;
+            $(".section").addClass("resize");
+            scrollItem.each(function() {
+              sectionsHeight[this.title] = $(this).offset().top;
+            });
+          }
+          sectionListen();
+          viewport.resize(sectionListen);
+          viewport.bind("orientationchange", function() {
+            sectionListen();
+          });
+
+          var count = 0;
+
+          scrollItem.each(function() {
+            var anchor = $(this).attr("id");
+            var title = $(this).attr("title");
+            count++;
+            $("#section-menu ul").append(
+              '<li><a id="nav_' +
+                title +
+                '" href="#' +
+                anchor +
+                '"><span>' +
+                count +
+                "</span> " +
+                title +
+                "</a></li>"
+            );
+          });
+
+          function menuListen() {
+            var pos = $(this).scrollTop();
+            pos = pos + viewportHeight * 0.625;
+            for (i in sectionsHeight) {
+              if (sectionsHeight[i] < pos) {
+                $("#section-menu a").removeClass("active");
+                $("#section-menu a#nav_" + i).addClass("active");
+                var newHash =
+                  "#" + $('.scroll-item[title="' + i + '"]').attr("id");
+                if (history.pushState) {
+                  history.pushState(null, null, newHash);
+                } else {
+                  location.hash = newHash;
+                }
+              } else {
+                $("#section-menu a#nav_" + i).removeClass("active");
+                if (pos < viewportHeight - 72) {
+                  history.pushState(null, null, " ");
+                }
+              }
+            }
+          }
+          scrollMenu.css("margin-top", (scrollMenu.height() / 2) * -1);
+
+          /* ==========================================================================
+	   Smooth Scroll for Anchor Links and URL refresh
+	   ========================================================================== */
+
+          scrollMenu.find("a").click(function() {
+            var href = $.attr(this, "href");
+            $("html").animate(
+              {
+                scrollTop: $(href).offset().top
+              },
+              500,
+              function() {
+                window.location.hash = href;
+              }
+            );
+            return false;
+          });
+
+          /* ==========================================================================
+	   Fire functions on Scroll Event
+	   ========================================================================== */
+
+          function scrollHandler() {
+            menuListen();
+            menuFreeze();
+          }
+          scrollHandler();
+          viewport.on("scroll", function() {
+            scrollHandler();
+            //			window.requestAnimationFrame(scrollHandler);
+          });
+        });
+      </script>
+    </div>
+  </body>
+</html>

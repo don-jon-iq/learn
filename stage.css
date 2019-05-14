@@ -1,0 +1,456 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "cocon-next-arabic";
+}
+
+body {
+  background: #eee;
+  color: #444;
+  -webkit-font-smoothing: antialiased;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  font-weight: 400;
+  height: auto !important;
+  height: 100%;
+
+  min-height: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+header {
+  z-index: 2;
+  background-color: rgb(140, 193, 193);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+header > div#logo {
+  top: 1rem;
+  position: relative;
+}
+
+header > .menuDown {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+}
+
+header > .menuUp {
+  box-shadow: none;
+}
+
+header > div#logo > h1 {
+  color: white;
+  font-weight: 300;
+  text-transform: lowercase;
+}
+
+header > div#logo > div#navToggle {
+  background-color: rgba(0, 0, 0, 0.15);
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 300ms all ease;
+}
+
+header > div#logo > div#navToggle:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+header > div#logo > div#navToggle > a {
+  color: rgba(255, 255, 255, 0.85);
+  display: block;
+  font-size: 0.85em;
+  font-weight: 600;
+  padding: 0 2.5rem;
+  text-decoration: none;
+  transition: 300ms all ease;
+}
+
+header > div#logo > div#navToggle:hover > a {
+  color: rgba(255, 255, 255, 1);
+}
+
+header > nav {
+  background-color: white;
+  display: none;
+  flex: 1;
+  transform: 300ms all ease;
+}
+
+header nav > ul {
+  list-style-type: none;
+}
+
+header nav > ul > li {
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+header nav > ul > li:last-of-type {
+  border-bottom: none;
+}
+
+header nav > ul > li > a {
+  display: block;
+  color: rgba(0, 0, 0, 0.65);
+  font-weight: 700;
+  padding: 1.5rem 0;
+  text-decoration: none;
+  transition: 250ms all ease;
+}
+
+header nav > ul > li > a span.toggle {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 3rem;
+  color: rgba(0, 0, 0, 0.25);
+  font-size: 0.75em;
+  font-weight: 500;
+  padding: 2px 8px;
+  text-transform: lowercase;
+}
+
+header nav > ul > li > a span.caret {
+  display: none;
+}
+
+header > nav > ul > li:hover > a {
+  color: rgb(140, 193, 193);
+}
+
+header > nav > ul > li > nav {
+  background-color: rgb(51, 51, 51);
+  border-radius: 1.5em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  display: none;
+  overflow: hidden;
+  position: absolute;
+  right: 5%;
+  width: 90%;
+  z-index: 100;
+}
+
+header > nav > ul > li > nav > ul > li > a {
+  color: rgba(255, 255, 255, 0.85);
+  transition: 300ms all ease;
+}
+
+header > nav > ul > li > nav > ul > li:hover > a {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: rgba(255, 255, 255, 1);
+}
+
+/* Medium screens */
+@media all and (min-width: 600px) {
+  header > div#logo > div#navToggle {
+    display: none;
+  }
+
+  header {
+    background-color: white;
+    flex-direction: row;
+    line-height: 90px;
+    padding: 0 3rem;
+    position: fixed;
+    text-align: left;
+    width: 100%;
+  }
+
+  header > div#logo {
+    background-color: transparent;
+    line-height: 90px;
+  }
+
+  header > div#logo > h1 {
+    color: rgb(140, 193, 193);
+  }
+
+  header > nav {
+    background-color: transparent;
+    display: block;
+  }
+
+  header > nav > ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+  }
+
+  header nav > ul > li {
+    border-bottom: none;
+  }
+
+  header nav > ul > li > a {
+    padding: 0 1.25rem;
+  }
+
+  header nav > ul > li > a span.toggle {
+    display: none;
+  }
+
+  header nav > ul > li > a span.caret {
+    border-bottom: 4px solid transparent;
+    border-top: 4px solid rgba(0, 0, 0, 0.65);
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    border-radius: 1px;
+    content: "";
+    display: inline-block;
+    height: 0;
+    margin: 0 0 0 0.25rem;
+    transition: 250ms all ease;
+    width: 0;
+    vertical-align: middle;
+  }
+
+  header nav > ul > li:hover > a span.caret {
+    border-top-color: rgb(140, 193, 193);
+    transform: rotate(270deg);
+  }
+
+  header > nav > ul > li:hover > nav {
+    background-color: rgb(51, 51, 51);
+    border-radius: 0.25em;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+    display: block;
+    line-height: 3em;
+    right: -50%;
+    width: 196px;
+  }
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  font-family: "Helvetica Neue", sans-serif;
+  overflow-x: hidden;
+}
+
+h2 {
+  font-weight: 100;
+  font-size: 6em;
+  line-height: 1em;
+  text-transform: uppercase;
+
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.inner {
+  text-align: center;
+}
+#section-title {
+  margin-top: 70px;
+}
+
+/* ==========================================================================
+   Sections
+   ========================================================================== */
+
+.section {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: auto;
+  padding: 101px 0px 101px 0;
+}
+#section-one {
+  background: darkslategrey;
+}
+#section-two {
+  background: #55968f;
+}
+#section-three {
+  background: darkslategrey;
+}
+#section-four {
+  background: #55968f;
+}
+#section-five {
+  background: darkslategrey;
+}
+#section-six {
+  background: #55968f;
+}
+#section-seven {
+  background: darkslategrey;
+}
+
+/* ==========================================================================
+   Section Navigation
+   ========================================================================== */
+
+#section-menu {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  z-index: 3000;
+  text-transform: uppercase;
+
+  -webkit-transition: all ease 0.1s;
+  transition: all ease 0.1s;
+}
+#section-menu.freeze {
+  right: -112px;
+}
+.touch #section-menu {
+  display: none;
+}
+#section-menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#section-menu li {
+}
+#section-menu a {
+  float: right;
+  clear: both;
+
+  display: block;
+  height: 2em;
+  line-height: 2em;
+  text-decoration: none;
+  padding: 0 16px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  white-space: nowrap;
+
+  -webkit-transition: all ease 0.1s;
+  transition: all ease 0.1s;
+}
+#section-menu.freeze a {
+  float: none;
+  width: 128px;
+}
+#section-menu a:hover,
+#section-menu a:focus {
+  background: rgba(0, 0, 0, 0.75);
+  font-size: 1.2em;
+}
+#section-menu a span {
+  display: none;
+  font-weight: 700;
+  position: relative;
+  width: 48px;
+  left: -16px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.1);
+}
+#section-menu a.active {
+  background: #000;
+  font-size: 1.4em;
+  font-weight: 700;
+}
+#section-menu.freeze a span {
+  display: inline-block;
+}
+#section-menu a.active span {
+  display: inline-block;
+  background: #000;
+}
+#section-menu a.active span:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  background: rgba(255, 255, 255, 0.25);
+}
+#section-menu.freeze a.active span:before {
+  display: none;
+}
+.flex-container {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-container > div {
+  margin: 30px;
+  width: 22.15%;
+   
+}
+#container {
+  height: 386px;
+  border-radius: 15px;
+  position: relative;
+  top: 0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5) inset;
+}
+
+#container-title {
+  margin: 122px 0;
+  font-size: 3rem;
+  color: white;
+}
+#container-list {
+  font-size: 1.2rem;
+  list-style-type: none;
+}
+#container-list li a {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+@media (max-width: 500px) {
+  .section {
+    padding: 101px 0 950px 0;
+  }
+
+  #section-title {
+    font-size: 3.2rem;
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: 0;
+  }
+.flex-container {
+  display: block;
+    justify-content: none;
+}
+
+.flex-container > div {
+  margin: 20px;
+  width: 230px;
+   
+}
+  #container {
+    float: left;
+    height: 260px;
+    margin-left: 22.1992199999%;
+    border-radius: 15px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5) inset;
+  }
+
+  .container-1 {
+    width: 230px;
+    margin-top: 59px;
+  }
+
+  .container-2 {
+    clear: both;
+    width: 230px;
+    margin-top: 17px;
+  }
+
+  .container-3 {
+    clear: both;
+    width: 230px;
+    margin-top: 17px;
+  }
+  #container-title {
+    font-size: 2.8rem;
+  }
+  #container-list {
+    margin-top: 5px;
+    font-size: 1.2rem;
+    list-style-type: none;
+  }
+}

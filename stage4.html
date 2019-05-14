@@ -1,0 +1,372 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="stage.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="//www.fontstatic.com/f=cocon-next-arabic" />
+    <link rel="stylesheet" type="text/css" href="//www.fontstatic.com/f=cocon-next-arabic,kawkab-bold" />
+
+    <title>Learn</title>
+</head>
+
+<body>
+    <header>
+        <div id="logo" class="menuUp">
+            <img src="logo.png">
+            <div id="navToggle"><a href="index.html">Menu</a></div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $("#navToggle a").click(function(e) {
+                    e.preventDefault();
+
+                    $("header > nav").slideToggle("medium");
+                    $("#logo").toggleClass("menuUp menuDown");
+                });
+
+                $(window).resize(function() {
+                    if ($(window).width() >= "600") {
+                        $("header > nav").css("display", "block");
+
+                        if ($("#logo").attr('class') == "menuDown") {
+                            $("#logo").toggleClass("menuUp menuDown");
+                        }
+                    } else {
+                        $("header > nav").css("display", "none");
+                    }
+                });
+
+                $("header > nav > ul > li > a").click(function(e) {
+                    if ($(window).width() <= "600") {
+                        if ($(this).siblings().size() > 0) {
+                            $(this).siblings().slideToggle("fast")
+                            $(this).children(".toggle").html($(this).children(".toggle").html() == 'close' ? 'expand' : 'close');
+                        }
+                    }
+                });
+            });
+        </script>
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li>
+                    <a href="#">المراحل <span class="toggle">Expand</span><span class="caret"></span></a>
+                    <nav>
+                        <ul>
+                            <li><a href="stage1.html">المرحلة الاولى</a></li>
+                            <li><a href="stage2.html">المرحلة الثانية</a></li>
+                            <li><a href="stage3.html">المرحلة الثالثة</a></li>
+                            <li><a href="stage4.html">المرحلة الرابعة</a></li>
+                        </ul>
+                    </nav>
+                </li>
+                <li>
+                    <a href="#">فيديوات <span class="toggle">Expand</span><span class="caret"></span></a>
+                    <nav>
+                        <ul>
+                            <li><a href="videos1.html">المرحلة الاولى</a></li>
+                            <li><a href="videos2.html">المرحلة الثانية</a></li>
+                            <li><a href="videos3.html">المرحلة الثالثة</a></li>
+                            <li><a href="videos4.html">المرحلة الرابعة</a></li>
+                        </ul>
+                    </nav>
+                </li>
+                <li><a href="ref.html">مصادر مفيدة</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div id="site-content">
+        <nav id="section-menu">
+            <ul></ul>
+        </nav>
+        <section id="section-one" class="section scroll-item" title="شبكات">
+            <div class="inner">
+                <h2 id="section-title">شبكات</h2>
+                <div class="flex-container">
+                <div class="container-1" id="container">
+                    <a id="container-title">ملازم</a>
+                    <ul id="container-list">
+                        <li><a href="https://drive.google.com/open?id=1xMDpTYBR5S0DZQFjy9UT9ozSLULO3Umj">الچابتر الاول</a> <a href="https://drive.google.com/open?id=17PHg4nqcf9A9VIDVIftICowqCuDiwf2O"> مترجم</a></li>
+                        <li><a href="https://drive.google.com/open?id=1MX-PQpYkG9QHavK9oBAMM6A5ThPgNb4k">الچابتر الثاني</a><a href="https://drive.google.com/open?id=18sym6mX4g1YtvEOGGqDgG0qE5VeiwPzN"> مترجم</a></li>
+                        <li><a href="https://drive.google.com/open?id=1Zz8c9CTAbQMy2QGk21890jRHi1GlCn2z">الچابتر الثالث</a><a href="https://drive.google.com/open?id=18sym6mX4g1YtvEOGGqDgG0qE5VeiwPzN"> مترجم</a></li>
+                        <li><a href="https://drive.google.com/open?id=16QrDHDcQc_EkCsD8RTTEYZYueUzZ31Zh">الچابتر الرابع</a><a href="https://drive.google.com/open?id=1OmS1_AO2xK29i8nW0X08Id1L0We_YnFN"> مترجم</a></li>
+                         <li><a href="https://drive.google.com/open?id=1c1Rl04LJt46G5c6Aqc5F1S9x8AUCUa2v">الچابتر الخامس</a></li>
+                         <li><a href="https://drive.google.com/open?id=1ckhUXlQzNjq1EsBMt6dYOnFu5DRIq8B2">الچابتر السادس</a></li>
+                        <li><a href="https://drive.google.com/open?id=1MlMBySAclkx53XmDX_eaF5dI7PAu5uy1">الچابتر السابع والثامن والتاسع</a></li>
+                    </ul>
+
+                </div>
+                <div class="container-2" id="container">
+                    <a id="container-title">اسئلة وحلولها</a>
+                    <ul id="container-list">
+                        <li><a href="https://drive.google.com/open?id=1oYMeA_DsAI4SvU_S-9DyIjWCm85_EX_H">الچابتر الاول</a></li>
+                        <li><a href="https://drive.google.com/open?id=19CdyBd_TLH8n23nHPZ6kH8gRH8cNVE41">الچابتر الثاني</a></li>
+                        
+                    </ul>
+                </div>
+             
+                </div>
+
+            </div>
+        </section>
+        <section id="section-two" class="section scroll-item" title="أمنية">
+            <div class="inner">
+                <h2 id="section-title">أمنية</h2>
+                <div class="flex-container">
+                <div class="container-1" id="container">
+                    <a id="container-title">ملازم</a>
+                    <ul id="container-list">
+                        <li><a href="https://drive.google.com/open?id=1mOfEL334nsxGhTkJtqqLfGbudtkUiqg9">الشيت الاول</a></li>
+                        <li><a href="#">الشيت الثاني</a></li>
+                        <li><a href="https://drive.google.com/open?id=1zKpidDpI-SywLNnVL6HnHH9ieRhLpBk-">الشيت الثالث</a></li>
+                        <li><a href="https://drive.google.com/open?id=179Q2oAnNkOJkw2YnoWRCOGCvhdtNm0r5">الشيت الرابع</a></li>
+                    </ul>
+                </div>
+                    <div class="container-2" id="container">
+                    <a id="container-title">مختبر</a>
+                    <ul id="container-list">
+                        <li><a href="https://drive.google.com/open?id=1qz3La6BQe0va0lwovyxa_2Uk7siQIRUw">الفصل الاول</a></li>
+                        <li><a href="https://drive.google.com/open?id=1bpIOhJrVJlDjgjGlMPRHxJN21hjwsGRG">الفصل الثاني</a></li>
+                        
+                    </ul>
+                </div>
+                </div>
+
+            </div>
+        </section>
+        <section id="section-three" class="section scroll-item" title="تطبيقات">
+            <div class="inner">
+                <h2 id="section-title">تطبيقات</h2>
+                <div class="flex-container">
+                <div class="container-1" id="container">
+                    <a id="container-title">ملازم</a>
+                    <ul id="container-list">
+                        <li><a href="#">الشيت الاول</a></li>
+                        <li><a href="https://drive.google.com/open?id=1evIg_vYnAnLVQJo1e9Nx9SHAnrm_N0hL">الشيت الثاني</a></li>
+                        <li><a href="https://drive.google.com/open?id=19sHnMlvQ1H9RsGvWL4kjW8Q39l6ebM4O">الانظم الخبيرة</a></li>
+                        <li><a href="https://drive.google.com/open?id=1nRgpgSvAtPR22NRjGYK5Ai3QaW2p9Qv9">الشبكات العصبية</a></li>
+                    </ul>
+                </div>
+                     <div class="container-2" id="container">
+                    <a id="container-title">مختبر</a>
+                    <ul id="container-list">
+                        <li><a href="https://drive.google.com/open?id=1s1X439FdtkW7vT5Wr53FJUgFlbtkB6-F">الفصل الاول</a></li>
+                        <li><a href="https://drive.google.com/open?id=1ytM5PzNKiI_1Wre771QLuGww1oJw0kDK">الفصل الثاني</a></li>
+                        
+                    </ul>
+                </div>
+                </div>
+
+            </div>
+        </section>
+        <section id="section-four" class="section scroll-item" title="منطق">
+            <div class="inner">
+                <h2 id="section-title">منطق مضبب</h2>
+                <div class="flex-container">
+                <div class="container-1" id="container">
+                    <a id="container-title">ملازم</a>
+                    <ul id="container-list">
+                        <li><a href="https://drive.google.com/open?id=16jeAq2njBad8r8ESL9jO93sqwZ5cZ1EY">الكورس الاول</a></li>
+                        <li><a href="https://drive.google.com/open?id=1yCY-jAXHCDI-GMSQhMwxK9k63BbT3o2C">الكورس الثاني</a></li>
+                    </ul>
+                </div>
+                      <div class="container-2" id="container">
+                    <a id="container-title">مختبر</a>
+                    <ul id="container-list">
+                        <li><a href="https://drive.google.com/open?id=1qUdTx5q5Rzihbl_XaHQEK9C_GuCDKwQe">الفصل الاول</a></li>
+                        <li><a href="https://drive.google.com/open?id=1xP89-fcnod2RBTfvj3bpkHKMro-iubCq">الفصل الثاني</a></li>
+                        
+                    </ul>
+                </div>
+                </div>
+
+            </div>
+        </section>
+        <section id="section-five" class="section scroll-item" title="نظم">
+            <div class="inner">
+                <h2 id="section-title">نظم تشغيل</h2>
+                <div class="flex-container">
+                <div class="container-1" id="container">
+                    <a id="container-title">ملازم</a>
+                    <ul id="container-list">
+                        <li><a href="https://drive.google.com/open?id=1Q6CwDvtt2tHO-YqCx97JlmI3zqed23y5">الچابتر الاول</a><a href="https://drive.google.com/open?id=1Q6CwDvtt2tHO-YqCx97JlmI3zqed23y5"> مترجم</a></li>
+                        <li><a href="https://drive.google.com/open?id=1IAnMcvcmprfeaf9OW_5LqlafO_2r3uVo">الچابتر الثاني</a></li>
+                        <li><a href="https://drive.google.com/open?id=1-BIlcDqbgQZtZP6y0mCJawHtPVQ_B3XL">الچابتر الثالث</a></li>
+                        <li><a href="https://drive.google.com/open?id=1bcyHBxMnRPvEP5pO1zZaaKWwzArqEJ1F">الجابتر الرابع</a></li>
+                        
+                         <li><a href="https://drive.google.com/open?id=1zG-uTH8EQRo7Ss8qfS7jGGqaFcYX1FnG">الجابتر الخامس</a></li>
+                         <li><a href="https://drive.google.com/open?id=1G8EkBUZkidJaiLHguCebUFPlSZsAI137">االجابتر السادس</a></li>
+                         <li><a href="https://drive.google.com/open?id=13unl7xOWawUbHIKruDV1moQPwJBZbzrB">االجابتر السابع</a><a href="https://drive.google.com/open?id=14LqQYic2iRbzacRnyXlsHAIijnZSYhvE"> مترجم</a></li>
+                    </ul>
+
+                </div>
+                    <div class="container-2" id="container">
+                    <a id="container-title">مختبر</a>
+                    <ul id="container-list">
+                        <li><a href="https://drive.google.com/open?id=1hIasoa9GDU6-oQEpGO0ejH-AjlReYehz">الفصل الاول</a></li>
+                        <li><a href="https://drive.google.com/open?id=1xUWtpkVd44DI2gA1rAk6EcfMqiL1Xhqx">الفصل الثاني</a></li>
+                        
+                    </ul>
+                </div>
+               </div>
+
+            </div>
+        </section>
+        <section id="section-six" class="section scroll-item" title="محاكاة">
+            <div class="inner">
+                <h2 id="section-title">محاكاة</h2>
+                <div class="flex-container">
+                <div class="container-1" id="container">
+                    <a id="container-title">ملازم</a>
+                    <ul id="container-list">
+                        <li><a href="https://drive.google.com/open?id=11VL0uw9yAxc88K9WeSFr-0c3N7AlWIxl">جميع الملازم</a></li>
+                        
+                    </ul>
+
+                </div>
+                </div>
+            </div>
+        </section>
+        <section id="section-seven" class="section scroll-item" title="برمجة">
+            <div class="inner">
+                <h2 id="section-title">برمجة نوافذ</h2>
+                <div class="flex-container">
+                <div class="container-1" id="container">
+                    <a id="container-title">ملازم</a>
+                    <ul id="container-list">
+                        <li><a href="https://drive.google.com/open?id=1OS3TlXgNLlOcw-3jMFJTeXCJKc6_Q-Wh">كورس اول</a></li>
+                        <li><a href="https://drive.google.com/open?id=1TJtDpZ02AzkJhHRtBTeOxsEEK46lu8HS">كورس ثاني</a></li>
+                    </ul>
+
+                </div>
+                <div class="container-2" id="container">
+             <a id="container-title">مختبر</a>
+                    <ul id="container-list">
+                        <li><a href="https://drive.google.com/open?id=1T36IhGyGE67mt_oYkLPUwX9L9q99J1Ns">الكورس الاول</a></li>
+                         <li><a href="https://drive.google.com/open?id=1vT1-clVZ7YQIw6kMHrZuE3Oyj4ooZeR_">الكورس الثاني</a></li>
+                       
+                    </ul>
+                
+                
+                </div>
+               </div>
+
+            </div>
+        </section>
+
+        <script>
+            jQuery(function($) {
+
+                var html = $('html');
+                var viewport = $(window);
+                var viewportHeight = viewport.height();
+
+                var scrollMenu = $('#section-menu');
+                var timeout = null;
+
+                function menuFreeze() {
+                    if (timeout !== null) {
+                        scrollMenu.removeClass('freeze');
+                        clearTimeout(timeout);
+                    }
+
+                    timeout = setTimeout(function() {
+                        scrollMenu.addClass('freeze');
+                    }, 2000);
+                }
+                scrollMenu.mouseover(menuFreeze);
+
+                /* ==========================================================================
+	   Build the Scroll Menu based on Sections .scroll-item
+	   ========================================================================== */
+
+                var sectionsHeight = {},
+                    viewportheight, i = 0;
+                var scrollItem = $('.scroll-item');
+                var bannerHeight;
+
+                function sectionListen() {
+                    viewportHeight = viewport.height();
+                    bannerHeight = (viewportHeight);
+                    $('.section').addClass('resize');
+                    scrollItem.each(function() {
+                        sectionsHeight[this.title] = $(this).offset().top;
+                    });
+                }
+                sectionListen();
+                viewport.resize(sectionListen);
+                viewport.bind('orientationchange', function() {
+                    sectionListen();
+                });
+
+                var count = 0;
+
+                scrollItem.each(function() {
+                    var anchor = $(this).attr('id');
+                    var title = $(this).attr('title');
+                    count++;
+                    $('#section-menu ul').append('<li><a id="nav_' + title + '" href="#' + anchor + '"><span>' + count + '</span> ' + title + '</a></li>');
+                });
+
+                function menuListen() {
+                    var pos = $(this).scrollTop();
+                    pos = pos + viewportHeight * 0.625;
+                    for (i in sectionsHeight) {
+                        if (sectionsHeight[i] < pos) {
+                            $('#section-menu a').removeClass('active');
+                            $('#section-menu a#nav_' + i).addClass('active');;
+                            var newHash = '#' + $('.scroll-item[title="' + i + '"]').attr('id');
+                            if (history.pushState) {
+                                history.pushState(null, null, newHash);
+                            } else {
+                                location.hash = newHash;
+                            }
+                        } else {
+                            $('#section-menu a#nav_' + i).removeClass('active');
+                            if (pos < viewportHeight - 72) {
+                                history.pushState(null, null, ' ');
+                            }
+                        }
+                    }
+                }
+                scrollMenu.css('margin-top', scrollMenu.height() / 2 * -1);
+
+                /* ==========================================================================
+	   Smooth Scroll for Anchor Links and URL refresh
+	   ========================================================================== */
+
+                scrollMenu.find('a').click(function() {
+                    var href = $.attr(this, 'href');
+                    $('html').animate({
+                        scrollTop: $(href).offset().top
+                    }, 500, function() {
+                        window.location.hash = href;
+                    });
+                    return false;
+                });
+
+                /* ==========================================================================
+	   Fire functions on Scroll Event
+	   ========================================================================== */
+
+                function scrollHandler() {
+                    menuListen();
+                    menuFreeze();
+                }
+                scrollHandler();
+                viewport.on('scroll', function() {
+                    scrollHandler();
+                    //			window.requestAnimationFrame(scrollHandler);
+                });
+            });
+        </script>
+
+    </div>
+
+</body>
+
+</html>

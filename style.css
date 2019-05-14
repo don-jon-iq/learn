@@ -1,0 +1,570 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'cocon-next-arabic';
+}
+
+body {
+    background: #eee;
+    color: #444;
+    -webkit-font-smoothing: antialiased;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    font-weight: 400;
+    height: auto !important;
+    height: 100%;
+
+    min-height: 100%;
+    text-rendering: optimizeLegibility;
+}
+
+/* style for header */
+header {
+    z-index: 2;
+    background-color: rgb(140, 193, 193);
+    border-bottom: 1px solid rgba(0, 0, 0, .15);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+header > div#logo {
+    top: 1rem;
+    position: relative;
+}
+
+header > .menuDown {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .15);
+}
+
+header > .menuUp {
+    box-shadow: none;
+}
+
+header > div#logo > h1 {
+    color: white;
+    font-weight: 300;
+    text-transform: lowercase;
+}
+
+header > div#logo > div#navToggle {
+    background-color: rgba(0, 0, 0, .15);
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 300ms all ease;
+}
+
+header > div#logo > div#navToggle:hover {
+    background-color: rgba(0, 0, 0, .1);
+}
+
+header > div#logo > div#navToggle > a {
+    color: rgba(255, 255, 255, .85);
+    display: block;
+    font-size: 0.85em;
+    font-weight: 600;
+    padding: 0 2.5rem;
+    text-decoration: none;
+    transition: 300ms all ease;
+}
+
+header > div#logo > div#navToggle:hover > a {
+    color: rgba(255, 255, 255, 1);
+}
+
+header > nav {
+    background-color: white;
+    display: none;
+    flex: 1;
+    transform: 300ms all ease;
+}
+
+header nav > ul {
+    list-style-type: none;
+}
+
+header nav > ul > li {
+    border-bottom: 1px dotted rgba(0, 0, 0, .1);
+    position: relative;
+}
+
+header nav > ul > li:last-of-type {
+    border-bottom: none;
+}
+
+header nav > ul > li > a {
+    display: block;
+    color: rgba(0, 0, 0, .65);
+    font-weight: 700;
+    padding: 1.5rem 0;
+    text-decoration: none;
+    transition: 250ms all ease;
+}
+
+header nav > ul > li > a span.toggle {
+    background-color: rgba(0, 0, 0, .05);
+    border-radius: 3rem;
+    color: rgba(0, 0, 0, .25);
+    font-size: 0.75em;
+    font-weight: 500;
+    padding: 2px 8px;
+    text-transform: lowercase;
+}
+
+header nav > ul > li > a span.caret {
+    display: none;
+}
+
+header > nav > ul > li:hover > a {
+    color: rgb(140, 193, 193);
+}
+
+header > nav > ul > li > nav {
+    background-color: rgb(51, 51, 51);
+    border-radius: 1.5em;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .6);
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    right: 5%;
+    width: 90%;
+    z-index: 100;
+}
+
+header > nav > ul > li > nav > ul > li > a {
+    color: rgba(255, 255, 255, .85);
+    transition: 300ms all ease;
+}
+
+header > nav > ul > li > nav > ul > li:hover > a {
+    background-color: rgba(0, 0, 0, .6);
+    color: rgba(255, 255, 255, 1);
+}
+
+/* Medium screens */
+@media all and (min-width: 600px) {
+    header > div#logo > div#navToggle {
+        display: none;
+    }
+
+    header {
+        background-color: white;
+        flex-direction: row;
+        line-height: 90px;
+        padding: 0 3rem;
+        position: fixed;
+        text-align: left;
+        width: 100%;
+    }
+
+    header > div#logo {
+        background-color: transparent;
+        line-height: 90px;
+    }
+
+    header > div#logo > h1 {
+        color: rgb(140, 193, 193);
+    }
+
+    header > nav {
+        background-color: transparent;
+        display: block;
+    }
+
+    header > nav > ul {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-end;
+    }
+
+    header nav > ul > li {
+        border-bottom: none;
+    }
+
+    header nav > ul > li > a {
+        padding: 0 1.25rem;
+    }
+
+    header nav > ul > li > a span.toggle {
+        display: none;
+    }
+
+    header nav > ul > li > a span.caret {
+        border-bottom: 4px solid transparent;
+        border-top: 4px solid rgba(0, 0, 0, .65);
+        border-right: 4px solid transparent;
+        border-left: 4px solid transparent;
+        border-radius: 1px;
+        content: "";
+        display: inline-block;
+        height: 0;
+        margin: 0 0 0 .25rem;
+        transition: 250ms all ease;
+        width: 0;
+        vertical-align: middle;
+    }
+
+    header nav > ul > li:hover > a span.caret {
+        border-top-color: rgb(140, 193, 193);
+        transform: rotate(270deg);
+    }
+
+    header > nav > ul > li:hover > nav {
+        background-color: rgb(51, 51, 51);
+        border-radius: .25em;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, .6);
+        display: block;
+        line-height: 3em;
+        right: -50%;
+        width: 196px;
+    }
+}
+
+
+#title-logo {
+    font-size: 4rem;
+    position: relative;
+    top: 90px;
+    left: 44%;
+    font-family: 'cocon-next-arabic';
+    font-family: 'kawkab-bold';
+}
+
+#title-des {
+    font-size: 2rem;
+    position: relative;
+    text-align: center;
+
+    top: 90px;
+}
+
+/* style for wrapper and footer */
+#site-content {
+    min-height: 100%;
+    min-height: 100vh;
+    min-width: 100%;
+    min-width: 1187px;
+    padding-top: 65px;
+    position: relative;
+    z-index: 1;
+
+    -webkit-box-shadow: #000 0 7px 35px 0;
+    -moz-box-shadow: #000 0 7px 35px 0;
+    box-shadow: #000 0 7px 35px 0;
+
+}
+
+#site-footer {
+    min-width: 100%;
+    min-width: 1187px;
+    padding: 25px 0;
+    font-size: 85%;
+    background-color: darkslategrey;
+    position: fixed;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* NOT NEEDED, THIS IS JUST FOR THE PEN */
+@import url(//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css);
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #D1D1D1;
+}
+
+#site-content {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#site-footer {
+    min-height: 2vw;
+    background-size: cover;
+    background-position: center;
+}
+
+#p1-footer {
+    font-weight: bold;
+    font-size: 12px;
+
+}
+
+#p2-footer {
+    text-align: center;
+    bottom: 0px;
+    font-family: monospace;
+    color: #fff;
+    font-family: 'cocon-next-arabic';
+}
+
+.e-mail {
+    color: #cfc91d;
+}
+.e-mail:hover {
+  color:   #f2f23c;
+}
+
+.wrapper {
+    text-align: center;
+    width: 100%;
+    min-width: 1187px;
+}
+
+.wrapper h2 {
+    font-size: 46px;
+    line-height: 46px;
+    font-weight: 800;
+    color: #02918c;
+    text-transform: uppercase;
+}
+
+.wrapper h2:after {
+    content: "~~~~~~~~ :: ~~~~~~~~";
+    display: block;
+    font-size: 12px;
+    padding: 12px 0 0 0;
+    color: #7e8287;
+}
+
+.wrapper p.text {
+    padding: 0 150px;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+#button-main {
+    position: relative;
+}
+
+.wrapper button {
+
+    font-size: 14px;
+    background: #cfc91d;
+    color: #0b1016;
+    text-transform: uppercase;
+    border: none;
+    font-weight: 800;
+    margin-top: 55px;
+    padding: 14px 50px;
+    cursor: pointer;
+}
+
+.wrapper button:hover {
+    background-color: #f2f23c;
+}
+
+.home a {
+    font-size: 14px;
+    background: #cfc91d;
+    color: #0b1016;
+    text-transform: uppercase;
+    border: none;
+    font-weight: 800;
+    padding: 14px 50px;
+    top: 55px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.home a:hover {
+    background-color: #f2f23c;
+}
+
+/* ========== main ============= */
+
+/* ============= HOME =========== */
+
+.main {
+
+    padding-top: 61px;
+}
+
+.home {
+    background: darkslategrey;
+    background-repeat: no-repeat;
+    background-position-y: 61px;
+}
+
+.home-wrapper {
+    max-width: 1127px;
+    color: white;
+    font-size: 14px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 161px 0 200px 0;
+}
+
+.home-wrapper h2 {
+    font-size: 30px;
+
+    color: white;
+    text-transform: lowercase;
+    font-weight: normal;
+}
+
+.home-wrapper h2:after {
+    content: none;
+}
+
+.home-wrapper h1 {
+    font-size: 140px;
+    text-transform: uppercase;
+    font-weight: 800;
+
+    margin-top: -11px;
+}
+
+.home-wrapper p {
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    margin-top: -7px;
+}
+
+.home-wrapper img {
+    display: block;
+    margin-top: 47px;
+}
+
+
+/* ============================= ABOUT ME =============================== */
+.about-me-wrapper {
+    max-width: 1187px;
+    color: #7e8287;
+    font-size: 16px;
+    display: inline-block;
+    margin: 100px 0;
+}
+
+.about-me-wrapper p.line {
+    padding-top: 22px;
+}
+
+.about-me-wrapper strong {
+    font-size: 23px;
+    line-height: 60px;
+}
+
+
+/* ============= PROMO =============== */
+.promo-wrapper {
+    margin: 55px 0 0 0;
+    text-align: center;
+    max-width: 1165px;
+    display: inline-block;
+}
+
+.promo-wrapper > div {
+    display: inline-block;
+    width: 24%;
+    font-size: 14px;
+    padding: 58px 50px 37px 50px;
+    vertical-align: top;
+}
+
+.promo-wrapper h3 {
+    font-size: 16px;
+    padding: 25px 0 0 0;
+}
+
+.promo-wrapper p {
+    font-size: 11px;
+    color: #6c7279;
+    line-height: 21px;
+    padding: 20px 0;
+}
+
+
+.promo-wrapper .promo1 div.promo1icon {
+    margin: 0 70px;
+    height: 35px;
+    width: 35px;
+    background: url("icon.png") 3px no-repeat ;
+}
+
+.promo-wrapper .promo2 div.promo2icon {
+    margin: 0 70px;
+    height: 35px;
+    width: 35px;
+    background: url("icon.png") -40px no-repeat ;
+}
+
+.promo-wrapper .promo3 div.promo3icon {
+    margin: 0 70px;
+    height: 35px;
+    width: 35px;
+    background: url("icon.png") -83px no-repeat ;
+}
+
+.promo-wrapper .promo4 div.promo4icon {
+    margin: 0 70px;
+    height: 35px;
+    width: 35px;
+    background: url("icon.png") -125px no-repeat ;
+}
+.about-me {
+    background: #cccccc;
+   
+}
+
+
+@media (max-width: 600px) {
+    #site-content {
+        padding: 0;
+        min-width: 187px;
+    }
+    #site-footer {
+        min-width: 187px;
+    }
+
+    .wrapper {
+        min-width: 187px;
+    }
+
+    .home {
+        width: 100%;
+    }
+
+    .home-wrapper {
+        max-width: 527px;
+        margin: 61px 0 200px 0;
+    }
+
+    .wrapper p.text {
+        padding: 0 50px;
+    }
+    
+    .promo-wrapper > div {
+    display: inline-block;
+    width: 44%;
+    font-size: 14px;
+    padding: 58px 50px 37px 50px;
+    vertical-align: top;
+}
+    .promo-wrapper .promo1 div.promo1icon {
+        margin: 0 35px;
+    }
+    
+    .promo-wrapper .promo2 div.promo2icon {
+        margin: 0 35px;
+    }
+
+    .promo-wrapper .promo3 div.promo3icon {
+        margin: 0 35px;
+    }
+
+    .promo-wrapper .promo4 div.promo4icon {
+        margin: 0 35px;
+    }
+    #img-half {
+       display: none;
+    }
+}
